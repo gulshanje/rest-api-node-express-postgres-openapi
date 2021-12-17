@@ -1,0 +1,162 @@
+openapi: 3.0.0
+info:
+  title: 'Express Postgres Openapi '
+  description: Basic openapi with nodejs express and postgress
+  version: 1.0.0
+  termsOfService: http://tos.raja.com
+  contact:
+    name: My Support
+    url: http://www.raja.com/support
+    email: support@raja.com
+  license:
+    name: MIT
+    url: https://es.wikipedia.org/wiki/Licencia_MIT
+externalDocs:
+  url: https://docs.example.com
+  description: Find more info here or there
+servers:
+  - url: http://localhost:3000
+    description: Sandbox environment server
+paths:
+  /courses:
+    get:
+      tags:
+        - default
+      summary: Get all courses
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 2
+                  title: 'Java SpringBoot Framework '
+                  description: Basic course of Java SpringBoot Framework with JDBC
+                  created_at: '2020-02-20T22:00:00.000Z'
+                  updated_at: '2020-02-20T22:00:00.000Z'
+                - id: 3
+                  title: 'React '
+                  description: Basic course of React
+                  created_at: '2020-02-20T22:00:00.000Z'
+                  updated_at: '2020-02-20T22:00:00.000Z'
+                - id: 4
+                  title: React and Redux Basic I
+                  description: Basic course of Java SpringBoot Framework with JDBC
+                  created_at: '2020-02-20T22:00:00.000Z'
+                  updated_at: '2020-02-20T22:00:00.000Z'
+                - id: 5
+                  title: 'Java SpringBoot Framework ii '
+                  description: Basic course of Java SpringBoot Framework with JDBC
+                  created_at: '2020-02-20T22:00:00.000Z'
+                  updated_at: '2020-02-20T22:00:00.000Z'
+                - id: 7
+                  title: JDBC with SpringBoot
+                  description: Basic course of Java SpringBoot Framework with JDBC
+                  created_at: '2020-02-20T22:00:00.000Z'
+                  updated_at: '2020-02-20T22:00:00.000Z'
+                - id: 9
+                  title: Redux Beginner - Part I
+                  description: Basic course of Redux and hooks
+                  created_at: null
+                  updated_at: '2020-02-26T22:00:00.000Z'
+                - id: 10
+                  title: Advance React - Part I
+                  description: Redux and hooks - Advance level
+                  created_at: null
+                  updated_at: '2020-02-26T22:00:00.000Z'
+                - id: 12
+                  title: Test title PM
+                  description: data address from PM
+                  created_at: null
+                  updated_at: null
+    post:
+      tags:
+        - default
+      summary: Post new course
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                title: Test title PM
+                description: data address from PM
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: A new course added to table
+              
+  /courses/{courseId}:
+    get:
+      tags:
+        - default
+      summary: Get all course by Id
+      parameters:
+        - name: courseId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 7
+                  title: Test title PM - PUT
+                  description: data address from PM
+                  created_at: '2020-02-20T22:00:00.000Z'
+                  updated_at: '2020-02-20T22:00:00.000Z'
+    put:
+      tags:
+        - default
+      summary: Update course by Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                title: Test title PM - PUT
+                description: data address from PM
+      parameters:
+        - name: courseId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: Course details has been updated in Database
+    delete:
+      tags:
+        - default
+      summary: Delete course by Id
+      parameters:
+        - name: courseId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: 'Course deleted with ID: 7'
