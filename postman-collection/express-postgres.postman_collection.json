@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "bc4de1b9-0e80-4c90-91b1-ba10e7cbf340",
+		"name": "express-postgres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/courses",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all courses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/courses",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1320"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"528-d67EuLkQLmsR8WXwKJtL7qPWnOo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Dec 2021 21:31:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"Java SpringBoot Framework \",\n        \"description\": \"Basic course of Java SpringBoot Framework with JDBC\",\n        \"created_at\": \"2020-02-20T22:00:00.000Z\",\n        \"updated_at\": \"2020-02-20T22:00:00.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"React \",\n        \"description\": \"Basic course of React\",\n        \"created_at\": \"2020-02-20T22:00:00.000Z\",\n        \"updated_at\": \"2020-02-20T22:00:00.000Z\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"React and Redux Basic I\",\n        \"description\": \"Basic course of Java SpringBoot Framework with JDBC\",\n        \"created_at\": \"2020-02-20T22:00:00.000Z\",\n        \"updated_at\": \"2020-02-20T22:00:00.000Z\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Java SpringBoot Framework ii \",\n        \"description\": \"Basic course of Java SpringBoot Framework with JDBC\",\n        \"created_at\": \"2020-02-20T22:00:00.000Z\",\n        \"updated_at\": \"2020-02-20T22:00:00.000Z\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"JDBC with SpringBoot\",\n        \"description\": \"Basic course of Java SpringBoot Framework with JDBC\",\n        \"created_at\": \"2020-02-20T22:00:00.000Z\",\n        \"updated_at\": \"2020-02-20T22:00:00.000Z\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Redux Beginner - Part I\",\n        \"description\": \"Basic course of Redux and hooks\",\n        \"created_at\": null,\n        \"updated_at\": \"2020-02-26T22:00:00.000Z\"\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Advance React - Part I\",\n        \"description\": \"Redux and hooks - Advance level\",\n        \"created_at\": null,\n        \"updated_at\": \"2020-02-26T22:00:00.000Z\"\n    },\n    {\n        \"id\": 12,\n        \"title\": \"Test title PM\",\n        \"description\": \"data address from PM\",\n        \"created_at\": null,\n        \"updated_at\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get all course by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/courses/{{courseId}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"courses",
+						"{{courseId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all course by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/courses/{{courseId}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"courses",
+								"{{courseId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9d-2RXoQwIsPdMeoM/G8xJfcxt7kpo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Dec 2021 21:32:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 7,\n        \"title\": \"Test title PM - PUT\",\n        \"description\": \"data address from PM\",\n        \"created_at\": \"2020-02-20T22:00:00.000Z\",\n        \"updated_at\": \"2020-02-20T22:00:00.000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post new course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Test title PM\",\r\n    \"description\": \"data address from PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/courses",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all course by Id Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Test title PM\",\r\n    \"description\": \"data address from PM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/courses",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-0cd16Zh6O7el+kKs2ristXZ7iIk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Dec 2021 21:31:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "A new course added to table"
+				}
+			]
+		},
+		{
+			"name": "Update course by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Test title PM - PUT\",\r\n    \"description\": \"data address from PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/courses/{{courseId}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"courses",
+						"{{courseId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post new course Copy",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Test title PM - PUT\",\r\n    \"description\": \"data address from PM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/courses/{{courseId}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"courses",
+								"{{courseId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-QrmVr7h27Zz89BFgb4KLFRibPfk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Dec 2021 21:32:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Course details has been updated in Database"
+				}
+			]
+		},
+		{
+			"name": "Delete course by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Test title PM - PUT\",\r\n    \"description\": \"data address from PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/courses/{{courseId}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"courses",
+						"{{courseId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete course by Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/courses/{{courseId}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"courses",
+								"{{courseId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-gA2H2rMjrN2T+SOtTRDstwV+Pgo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Dec 2021 21:33:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Course deleted with ID: 7"
+				}
+			]
+		}
+	]
+}
